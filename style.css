@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Merriweather', serif;
-    background: radial-gradient(circle at center, lightskyblue 0%, skyblue 50%, blue 100%);
+    background: radial-gradient(circle at center, lightskyblue 0%, skyblue 90%, blue 100%);
     color: #333;
     margin: 0;
     padding: 40px 20px;
@@ -22,6 +22,8 @@ body {
     min-height: auto;
     height: auto;
     position: relative;
+    background: rgb(255, 255, 255, 0.1);
+    border-radius: 99%;
 }
 
 h1 {
@@ -34,9 +36,29 @@ h1 {
 
 p {
     line-height: 1.8;
-    color: #333; /* Dark gray text */
-    font-size: 1.1em;
+    color: #000; /* Dark gray text */
+    font-size: 14pt; font-weight: bold;    
 }
+  background: radial-gradient(
+    circle,
+    rgba(191, 233, 255, 0.95) 0%,
+    rgba(191, 233, 255, 0.88) 55%,
+    rgba(191, 233, 255, 0.25) 78%,
+    rgba(191, 233, 255, 0.00) 100%
+  );
+
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin: 12px 0;
+
+  /* 번짐을 더해주는 글로우 */
+  box-shadow:
+    0 10px 24px rgba(191, 233, 255, 0.22),
+    0 0 28px rgba(191, 233, 255, 0.35);
+
+  color: #0b2230; /* 글자 가독성 */
+}
+
 
 hr.decorative {
     border: 0;

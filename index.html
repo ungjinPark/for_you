@@ -8,13 +8,92 @@
 </head>
 <body>
     <div class="container">
-        <h1>A Short Note</h1>
-        <p>This is a demonstration of a web page styled to look like a piece of stationery. We've used a paper texture for the background and an elegant serif font to create a warm, classic feel.</p>
+        <h1>To You, bak</h1>
         
         <hr class="decorative">
         
-        <p>The page has a main content area that resembles a sheet of paper, complete with a subtle shadow to give it depth and a faint line on the left, reminiscent of ruled paper. I hope you find this design pleasing!</p>
+<p>친해하는 당신께.</p>
+
+<p>벌써 함께 한지 2년 반이나 되어 갑니다.</p>
+
+<p>분명 처음 출발할 때는 얼마나 희망과 기대감에 차서, 뭐든 다 할 수 있으ㅡㄹ 것 같았는데,</p>
+
+<p>우리가 좋은 일 한다고 주변이 돕진 않대요? 하고 싶은 것, 해보고 싶은 것은 우리 지금도 같지만, 서로 생각은 달랐죠? 지금도 그렇고, 아직도 후회하는 것 두가지가 있어요.</p>
+
+<p>하나는 23년 11월에 왜 더 강하게 뜯어 말리지 못했을까?</p>
+<p>또 하나는 왜 우리 둘이 할 수 있는, 혹은 우리 둘을 주축으로 할 수 있는 다른 대안을 찾으려 하지 않았을까?</p>
+
+<p>이상한 건, 후회는 되는데 또 막상 지금 상황에서 다 되짚고 회고해 보면, 이것도 배움구나, 이것도 내 경험이구나라는 생각이 들어요.</p>
+
+<p>뭔가 하나를 향해 늘 달려가는 당신을 뒤따라 갈 생각에.<br>
+기대했고, 즐거웠는데, 우리가 선택한 선택지가 그걸 이정도로<br>
+망가트릴 줄은,, 사실  거의 60% 예상함.</p>
+
+<p>그래서 그렇게 말렸던 거임. 진짜 한 번만 더 말릴 걸!!!!!!!!!!!!!!!!!!!</p>
+
+<p>근데 너무 최악의 상황에서 있다보니까.<br>
+오히려 아이디어도 생기고, 생각도 정리 되고.<br>
+그 다음을 볼 수 있게 되는게 좀 신기하긴했어요.</p>
+
+<p>요세 제가 꿈꾸는건 뭐냐면. 이번엔 내가 당신을 고용해 보는 겁니다.ㅋㅋㅋㅋ</p>
+
+<p>이것도 나쁘지 않을 것 같다는 생각이 마구마구 들어요.</p>
+
+<p>당신의 신념과, 인생관이 어느세 저한테 스며들었다는 걸 알게 된게. 아 막상 사업해야지 했는데. 꼴꼬무 하다보니까 그 안에, 결국 제가 그리는 회사의 실무자가 전부 장애인으로 채워지고 있다는 거랑, 사업 하나하나를 기획할 때마다 반드시 ESG요소가 가장 먼저 고려되는 거에요.</p>
+
+<p>이미 물들어 버렸어. 이제 여기서 또 어떤 일들이 우리 앞에 다가올지는 모르는데, 이번에 가는 길은 진짜 우리 하고 싶은거 다 해 볼 수 있는 그런 기회의 대로였으면 좋겠다는 바람이 너무너무 강하게 들어요.</p>
+
+<p>그리고 이제는 제가 촉 새우면 제발!!!!!!!!! 반신반의라도 좀 해줘요. 왜 맨날 찍어먹고 탈 나기 전까지 이니정을 안하냐고!! 아무튼.</p>
+
+<p>늘 고맙습니다.<br>
+앞으로도 고마울거고,<br>
+지금도 고맙고.</p>
+
+<p>뭐 그런거죠.<br>
+아 그리고 이 편지 내용은 떄때로 바뀔 거니까 이 QR버리지 마세요. 이페이지는 우리 둘 말곤 아무도 접속 못하니까. 톡을로, 말로 하기 어려운 말은 이렇게 정리해서 여기에 적는게 아주 좋을 것 같아요.ㅋㅋㅋ</p>
+
+<p>그럼 이만 줄입니다.</p>
+
+<p>늘 감사를 느끼는, H가!</p>
+
     </div>
-    <script src="script.js"></script>
+
+<audio id="myAudio" src="MP_어느%20한적한%20카페.mp3" preload="auto" loop></audio>
+
+<script>
+  const audio = document.getElementById('myAudio');
+
+  // durationMs 동안 0 -> targetVolume 로 페이드인
+  function fadeIn(el, durationMs = 1500, targetVolume = 1.0) {
+    el.volume = 0;
+    const start = performance.now();
+
+    function step(now) {
+      const t = Math.min((now - start) / durationMs, 1);
+      el.volume = t * targetVolume;
+      if (t < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  async function playWithFadeIn() {
+    try {
+      await audio.play();         // 여기서 정책상 막힐 수 있음 
+      fadeIn(audio, 1500, 1.0);   // 1.5초 페이드인
+    } catch (e) {
+      console.log('재생 실패(정책/권한/로딩):', e);
+    }
+  }
+
+  // 로드 후 2초 뒤 재생 + 페이드인 시도(성공하면 바로 페이드인)
+  window.addEventListener('load', () => {
+    setTimeout(playWithFadeIn, 2000);
+  });
+
+  // 실패했을 때를 대비해, 첫 사용자 입력에서 다시 시도(가장 확실)
+  document.addEventListener('pointerdown', playWithFadeIn, { once: true });
+  document.addEventListener('touchend', playWithFadeIn, { once: true });
+</script>
 </body>
 </html>
